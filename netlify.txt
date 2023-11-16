@@ -1,6 +1,0 @@
-https://6500cbc9c671cf062760de12--verdelimon1.netlify.app/
-
-
-Profes, una aclaración que les hago por las dudas. En los requisitos pedían varias cosas para las cards, pero por diseño omití algunas como por ejemplo fecha de ingresado y  botón de ver más.
-Si es necesario para aprobar el proyecto, obviamente los agrego.
-Saludos! 
