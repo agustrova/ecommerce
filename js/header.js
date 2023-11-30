@@ -5,16 +5,16 @@ const loguedUser = JSON.parse(localStorage.getItem('currentUser'))
 
 
 if (loguedUser) {
-    if(loguedUser.role === 'Admin') {
+    if(loguedUser.rol === 'Admin') {
         const userMenu = document.createElement ('li') 
         userMenu.classList.add('nav-item');
-        userMenu.innerHTML = '<a href ="/pages/admin/user-admin.html" class="nav-link">Admin users</a>'
+        userMenu.innerHTML = '<a href ="/pages/admin/user-admin.html" class="nav-link">Admin usarios</a>'
 navList.appendChild(userMenu)
 
 
 const productMenu = document.createElement ('li') 
 productMenu.classList.add('nav-item');
-productMenu.innerHTML = '<a href ="/pages/admin/product-admin.html" class="nav-link">Admin prod</a>'
+productMenu.innerHTML = '<a href ="/pages/admin/product-admin.html" class="nav-link">Admin productos</a>'
 navList.appendChild(productMenu)
 
     }
@@ -53,7 +53,7 @@ navList.appendChild(productMenu)
     const loginLink = document.createElement("a")
     loginLink.href = '/pages/login/login.html';
     loginLink.innerText = "Ingresar";
-    loginLink.classList.add('header-link')
+    loginLink.classList.add('header-link', 'nav-link')
 
     userActionHTML.appendChild(loginLink)
 }

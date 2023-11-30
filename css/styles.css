@@ -21,11 +21,9 @@
     box-sizing: border-box;
 }
 
-
 body {
     font-family: var(--font-family);
 }
-
 
 .main-header {
     position: sticky;
@@ -88,7 +86,6 @@ body {
     overflow: hidden;
     background-color: #FEFEFE;
     transition: width .3s ease-in-out;
-    flex: 1;
 }
 
 .input-check:checked ~ .main-nav {
@@ -110,11 +107,15 @@ body {
     padding-right: 1rem;
 }
 
+
 .nav-item, .nav-link {
     padding: .25rem 1rem;
     display: inline-block;
     width: 100%;
     text-decoration: none;
+    border: none;
+    color: var(--negro-suave);
+    background-color: var(--secondary-color);
 }
 
 
@@ -174,7 +175,7 @@ button.nav-link {
     .main-nav {
         position: relative;
         top: 0;
-        width: auto !important;
+        width: auto;
         background-color: transparent;
     }
     .nav-list {
@@ -187,9 +188,6 @@ button.nav-link {
         border-bottom: none;
     }
 
-    .nav-item {
-        width: 13%;
-    }
 
 
     .nav-list {
@@ -199,7 +197,6 @@ button.nav-link {
 
     .nav-item, .nav-link {
         display: flex;
-        color: var(--negro-suave) !important;
 
     }
 
@@ -213,9 +210,7 @@ button.nav-link {
         font-weight: 400;
         align-items: center;
     }
-    .nav-item, .nav-link {
-padding: 0 !important;
-    }
+
 
     .nav-logo {
         margin: 1rem;
@@ -233,7 +228,8 @@ padding: 0 !important;
 
 .banner-img {
     width: 100%;
-    height: auto;
+    height: 400px;
+    object-fit: cover;
 }
 
 .main-title {
@@ -267,11 +263,6 @@ padding: 0 !important;
 }
 
 @media screen and (width > 768px) {
-    .banner-img {
-        width: 100%;
-        height: auto;
-    }
-
     .main-title { 
         font-size: 2.5rem;
     }
@@ -412,10 +403,6 @@ border-radius: .5rem;
     padding: 1rem;
 }
 
-.img-nosotros {
-    padding: .5rem;
-    width: 100%;
-}
 
 @media screen and (width > 768px) {
 
@@ -437,15 +424,6 @@ border-radius: .5rem;
         display: flex;
         flex-direction: row;
         align-items: center;
-    }
-
-    .img-container-nosotros {
-        width: 100%;
-        height: auto;
-    }
-
-    .img-escondida {
-        display: none;
     }
 
     .info-nosotros {

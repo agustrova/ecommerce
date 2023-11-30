@@ -19,7 +19,7 @@ arrayPintar.forEach ((user, index) => {
         <td class="user-location">${user.location}</td>
         <td class="user-age">${user.age}</td>
         <td class="user-date">${formatDate (user.bornDate)}</td>
-        <td class="user-rol">${user.role}</td>
+        <td class="user-rol">${user.rol}</td>
         <td> 
         <div class="btn-editarUser">
         <button class="action-btn btn-danger" title="Borrar usuario" onclick="borrarUsuario('${user.id}', '${user.fullname} ')">
@@ -86,6 +86,7 @@ password2: el.password2.value,
 active: el.active.checked,
 bornDate: new Date (el.bornDate.value).getTime(),
 location: el.location.value,
+rol: el.rol.value,
 id: id,
 image: el.image.value,
 }
@@ -177,6 +178,7 @@ el.email.value = userEdit.email
 el.image.value = userEdit.image
 el.location.value = userEdit.location
 el.active.checked = userEdit.active
+el.rol.value = userEdit.rol
 el.password.value = userEdit.password
 el.password.disabled = true
 el.password2.value = userEdit.password

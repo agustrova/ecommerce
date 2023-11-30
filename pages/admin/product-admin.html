@@ -31,7 +31,7 @@
                     <a class="nav-link" href="/pages/register/register.html">Registro</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/pages/about-us/about-us.html">Acerca de nosotros</a>
+                    <a class="nav-link" href="/pages/about-us/about-us.html">Nosotros</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/pages/contact/contact.html">Contacto</a>
@@ -53,6 +53,7 @@
         <hr class="hr-form">
     </div>
 
+    <main class="productadmin-main">
         <section class="form-container">
             <form class="form" id="product-form">
                 <input type="hidden" name="id">
@@ -72,18 +73,18 @@
                 </div>
                 <div class="admin-form-product">
                     <label for="oldprice">Precio viejo</label>
-                    <input type="number" name="oldprice" id="oldprice" />
+                    <input type="number" name="oldprice" id="oldprice" step="0.01" min="0" max="1000000" />
                 </div>
                 <div class="admin-form-product">
                     <label for="newprice">Precio actual</label>
-                    <input type="number" name="newprice" id="newprice" required/>
-                </div>
+                    <input type="number" name="newprice" id="newprice" step="0.01" min="0" max="1000000" required/>
+                </div>                
                 <div class="btn-container">
                     <button type="submit" class="btn-form">Agregar producto</button>
                 </div>
             </form>
-
         </section>
+    </main>
 
         <div class="product-search">
             <input class="input-text" type="text" class="input" id="search" placeholder="Buscar por nombre">
@@ -102,6 +103,7 @@
                     <th>Acciones</th>
                 </tr>
             </thead>
+
             <tbody id="table-body">
 
             </tbody>

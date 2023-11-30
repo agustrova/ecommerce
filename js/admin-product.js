@@ -14,8 +14,8 @@ function pintarProductosAdmin(arrayPintarProductos) {
         </td>
         <td class="product-name">${product.fullname}</td>
         <td class="product-descrption">${product.description}</td>
-        <td class="product-oldprice">${product.oldprice}</td>
-        <td class="product-newprice">${product.newprice}</td>
+        <td class="product-oldprice">$${product.oldprice}</td>
+        <td class="product-newprice">$${product.newprice}</td>
         <td>
         <div class="btn-editarProduct">
         <button class="action-btn btn-danger" title="Borrar Producto" onclick="borrarProducto('${product.id}', '${product.fullname}')">
@@ -166,3 +166,5 @@ productForm.addEventListener("submit", (evt) => {
     }
     
     pintarProductosAdmin(productsArray)
+
+

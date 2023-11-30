@@ -14,12 +14,13 @@ function pintarProductos(arrayPintar) {
         <p class="card-name">${prod.fullname}</p>
         <p class="card-description">${prod.description}</p>
             <div class="card-values">
-                <div class="card-oldprice">${prod.oldprice}</div>
-                <div class="card-newprice">${prod.newprice}</div>
+                <div class="card-oldprice">$${prod.oldprice}</div>
+                <div class="card-newprice">$${prod.newprice}</div>
             </div>    
     </div>
     <footer class="card-footer">
         <button class="card-btn">Agregar al carrito</button>
+        <button class="card-btn vermas-btn" onclick='verDetalle('${prod.id}')' type=button>Ver mas</button>
     </footer>
 </div>`
 })
@@ -27,3 +28,7 @@ function pintarProductos(arrayPintar) {
 
 pintarProductos(productsArray)
 
+
+function verDetalle(id){
+    window.location.href = 'pages/productDetail.html';
+}
