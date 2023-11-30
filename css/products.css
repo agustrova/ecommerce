@@ -23,12 +23,14 @@
     justify-content: center;
 }
 
+
+
 .card {
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    width: 200px;
-    height: 300px;
+    width: 50%;
+    height: auto;
     box-shadow: 0 0 1px #666;
     transition: all 300ms ease;
 }
@@ -45,10 +47,10 @@
 }
 
 .card-body {
-    padding: 4px 8px;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+    padding: .5rem;
 }
 
 .card-img { 
@@ -65,18 +67,19 @@
 
 .card-name {
     font-size: 14px;
+    margin: 0;
 }
 
 .card-description {
-    font-size: 10px;
+    font-size: 12px;
     flex-grow: 1;
+    margin: 0;
 }
 
 .card-values {
     display: flex;
     justify-content: flex-end;
     align-items: end;
-    margin-bottom: 5px;
 }
 
 .card-price {
@@ -99,6 +102,10 @@
 .card-footer {
     display: flex;
     justify-content: center;
+    background-color: white;
+    border: none;
+    padding: .5rem;
+    justify-content: space-between;
 }
 
 .card-btn {
@@ -107,20 +114,31 @@
     text-decoration: none;
     border: none;
     padding: 6px 12px;
-    margin-bottom: 5px;
     border-radius: 5px;
     color: var(--negro-suave);
-    margin-bottom: 1rem;
 }
 
 
 @media screen and (width > 768px) {
     .card {
         width: 250px;
-        height: 350px;
+        height: auto;
     }
 
     .card-img {
-        width: 12rem;
+        width: 14rem;
     }
+
+    div.card {
+        width: 20%;
+    }
+
+    .card-description {
+    margin-top: .5rem;
+}
+
+.card-values {
+    margin-top: 1rem;
+}
+
 }

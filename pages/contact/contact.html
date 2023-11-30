@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
-    <link rel="icon" href="/assets/iconos/limoncito.png" type="image/x-icon">
+    <link rel="icon" href="/assets/images/iconos/limoncito.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/register.css">
@@ -18,7 +18,7 @@
             <span class="burger-line"></span>
         </label>
         <a class="logo-link" href="/index.html">
-            <img class="nav-logo" src="/assets/iconos/verde limon-01.png" alt="logo-img">
+            <img class="nav-logo" src="/assets/images/iconos/verde limon-01.png" alt="logo-img">
         </a>
         <nav class="main-nav">
             <ul class="nav-list">
@@ -29,26 +29,28 @@
                     <a class="nav-link" href="/pages/register/register.html">Registro</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/pages/about-us/about-us.html">Acerca de nosotros</a>
+                    <a class="nav-link" href="/pages/about-us/about-us.html">Nosotros</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/pages/contact/contact.html"  style="font-weight: 600;">Contacto</a>
+                    <a class="nav-link" href="/pages/contact/contact.html">Contacto</a>
                 </li>
             </ul>
         </nav>
 
-        <div class="user-menu">
-            <a class="user-login" href="/pages/login/login.html">Usuario</a>
+        <div class="user-info" id="header-user">
+            <div class="user-action"></div>
+            <div class="user-name"></div>
             <span class="material-symbols-outlined">shopping_cart</span>
         </div>
     </header>
-
     <div class="title-container">
-        <h1  class="title-form" >Contacto</h1>
+        <h1 class="title-form">Contacto</h1>
     </div>
     <div class="hr-container">
         <hr class="hr-form">
     </div>
+
+<main class="contact-main">
     <section class="form-container">
         <div class="form">
             <div class="input-group">
@@ -74,15 +76,18 @@
     <div class="ubi-container">
         <iframe class="ubication" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1642.6452321514887!2d-58.47420267231349!3d-34.57151623491769!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb67adf409aab%3A0x8ba7126634ef88a2!2sPlaza%202119%2C%20C1430DGM%20Villa%20Urquiza%2C%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1694458180311!5m2!1ses-419!2sar" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
+</main>
 
     <footer class="main-footer">
         <section class="contact">
             <h1>Verde Limón</h1>
             <ul>
                 <li class="link-contact">
+                    <i class="fa-regular fa-map fa-zona"></i>
                     <a href="/pages/shipping/shipping.html" target="_blank">Zona de envíos</a>
                 </li>
                 <li class="link-contact">
+                    <i class="fa-solid fa-arrow-rotate-left fa-zona"></i>
                     <a href="/pages/devolucion/devolucion.html" target="_blank">Políticas de devolución</a>
                 </li>
         </ul>
@@ -115,6 +120,8 @@
             </ul>
         </section>
     </footer>
+
+
 
 </body>
 </html>
