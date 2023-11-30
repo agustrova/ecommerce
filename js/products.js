@@ -8,7 +8,7 @@ function pintarProductos(arrayPintar) {
     cardContainer.innerHTML += 
 ` <div class="card">
     <header class="cass-header">
-            <img class="card-img" src=${prod.img} alt="">
+            <img class="card-img" src=${prod.image} alt="">
     </header>
     <div class="card-body">
         <p class="card-name">${prod.fullname}</p>

@@ -17,7 +17,7 @@
             <span class="burger-line"></span>
         </label>
         <a class="logo-link" href="/index.html">
-            <img class="nav-logo" src="/assets/iconos/verde limon-01.png" alt="logo-img">
+            <img class="nav-logo" src="/assets/images/iconos/verde limon-01.png" alt="logo-img">
         </a>
         <nav class="main-nav">
             <ul class="nav-list">
@@ -25,7 +25,7 @@
                     <a class="nav-link" href="/index.html">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/pages/register/register.html"  style="font-weight: 600;">Registro</a>
+                    <a class="nav-link" href="/pages/register/register.html">Registro</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/pages/about-us/about-us.html">Acerca de nosotros</a>
@@ -36,8 +36,9 @@
             </ul>
         </nav>
 
-        <div class="user-menu">
-            <a class="user-login" href="/pages/login/login.html">Usuario</a>
+        <div class="user-info" id="header-user">
+            <div class="user-action"></div>
+            <div class="user-name"></div>
             <span class="material-symbols-outlined">shopping_cart</span>
         </div>
     </header>
@@ -48,11 +49,12 @@
     <div class="hr-container">
         <hr class="hr-form">
     </div>
+<main class="register-main">
     <section class="form-container">
         <div class="form">
             <div class="input-group">
                 <label for="name">Nombre Completo</label>
-                <input type="text" id="name" placeholder="Ingrese su nombre" required maxlength="200" name="nombre">
+                <input type="text" id="name" placeholder="Ingrese su nombre" required minlength="3" maxlength="200" name="nombre">
             </div>
             <div class="input-group">
                 <label for="email">Correo electrónico</label>
@@ -101,23 +103,25 @@
             </div>
             <div class="input-group">
                 <label for="message">Observaciones</label>
-                <textarea id="message" placeholder="Ingrese su mensaje" required name="mensaje" rows="8"></textarea >
+                <textarea id="message" placeholder="Ingrese su mensaje" required name="mensaje" rows="8" minlength="3" maxlength="300" ></textarea >
             </div>
             <div class="btn-container">
                     <button class="btn-form">Registrarse</button>
             </div>
         </div>
     </section>
-    </div>
+</main>
 
     <footer class="main-footer">
         <section class="contact">
             <h1>Verde Limón</h1>
             <ul>
                 <li class="link-contact">
+                    <i class="fa-regular fa-map fa-zona"></i>
                     <a href="/pages/shipping/shipping.html" target="_blank">Zona de envíos</a>
                 </li>
                 <li class="link-contact">
+                    <i class="fa-solid fa-arrow-rotate-left fa-zona"></i>
                     <a href="/pages/devolucion/devolucion.html" target="_blank">Políticas de devolución</a>
                 </li>
         </ul>

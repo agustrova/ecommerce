@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+
+:root {
+    --primary-color: #0f4432;
+    --primary-color-dark: #42a5a1;
+    --secondary-color: #e6e0c6;
+    --secondary-color-dark: #efb813;
+    --third-color: #e38229;
+    --four-color: #8abc97;
+    --negro-suave: #000000c8;
+    --text-light: #fffef7;
+    --font-family: 'Poppins', sans-serif;
+    --padding-normal: 1rem;
+    --margin-align: auto;
+}
+
+
+.table-container {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+
+}   
+
+.user-table, .product-table {
+    width: 100%;
+    display: block;
+    overflow-x: scroll;
+    margin: 1rem;
+    justify-content: center;
+    border-collapse: collapse;
+    border: 2px solid var(--primary-color);
+}
+
+.table-head {
+    background-color: #DDDDDD;
+    color: var(--negro-suave);
+    padding: 10px;
+}
+
+.table-head th {
+    font-family: var(--font-family);
+    font-weight: 500;
+    box-shadow: 0 0 1px #666;
+}
+
+.table-body {
+    .table-row {
+        
+        td {
+            padding: 10px;
+        }
+    }
+    
+}
+
+.table-row:nth-child(even) {
+    background-color: #DDDDDD;
+}
+
+.user-table :is(th, td) {
+    padding: 3px;
+        border: 2px solid var(--primary-color);
+}
+
+.product-table :is(th, td) {
+    padding: 3px;
+        border: 2px solid var(--primary-color);
+}
+
+.product-table {
+    width: 50%;
+}
+
+.user-avatar, .product-img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.table-row {
+    width: 30%;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.action-btn {
+    background-color: green;
+    color: white;
+    padding: .25rem;
+    border-radius: 3px;
+    cursor: pointer;
+    border: none;
+    &:not(:last-child) {
+        margin-right: 5px;
+    }
+
+    &.btn-danger {
+        background-color: crimson;
+    }
+}
+
+.btn-editarUser,.btn-editarProduct {
+    display: flex;
+    justify-content: space-between;
+    padding: .25rem;
+
+}
+
+.btn-editar, .btn-borrar{
+    font-size: 1.25rem;
+}
+
+.input-container {
+    margin-bottom: .5rem;
+    
+    .input {
+        padding: .375rem .675rem;
+        font-size: 1rem;
+        outline: none;
+        border: none;
+        border-radius: 3px;
+        border-bottom: 3px solid crimson;
+    }
+}
+
+.admin-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    gap: .5rem;
+}
+
+.input-group {
+    margin: 0 auto;
+    margin-bottom: .75rem;
+    display: flex;
+    flex-direction: column;
+
+    :is(input, textarea, select) {
+        padding: .375rem .675rem;
+        font-size: 1rem;
+        outline: none;
+        border: none;
+        border-radius: 3px;
+        border-bottom: 3px solid crimson;
+    }
+}
+
+.btn-form {
+    background-color: var(--secondary-color-dark);
+    color: white;
+    padding: .5rem .75rem;
+    border-radius: 3px;
+    cursor: pointer;
+    border: none;
+
+
+    &.btn-edit {
+        background-color: green;
+    }
+}
+
+@media screen and (width > 768px) {
+.user-table, .product-table {
+    width: 60%;
+    overflow-x:hidden;
+}
+
+}
