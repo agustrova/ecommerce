@@ -12,7 +12,7 @@ arrayPintar.forEach ((user, index) => {
     tableBody.innerHTML += `
     <tr class="table-body">
         <td class="user-image">
-            <img class="user-avatar" src="${user.image}" alt="$user.fullname} avar">
+            <img class="user-avatar" src="${user.image}" alt="imagen">
         </td>
         <td class="user-name">${user.fullname}</td>
         <td class="user-email">${user.email}</td>
