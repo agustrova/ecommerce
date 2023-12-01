@@ -4,6 +4,7 @@ const searchInput = document.querySelector('#search')
 const productForm = document.querySelector("form#product-form")
 const submitBtn = productForm.querySelector('button[type=submit].btn-form')
 console.log(productsArray[0])
+
 function pintarProductosAdmin(arrayPintarProductos) {
     tableBody.innerHTML = ""
     arrayPintarProductos.forEach ((product, index) => {
@@ -71,7 +72,6 @@ productForm.addEventListener("submit", (evt) => {
         oldprice: el.oldprice.value,
         newprice: el.newprice.value, 
         image: el.image.value,
-
     }
     
     if (el.id.value) {
