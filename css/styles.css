@@ -115,7 +115,6 @@ body {
     text-decoration: none;
     border: none;
     color: var(--negro-suave);
-    background-color: var(--secondary-color);
 }
 
 
@@ -163,6 +162,7 @@ body {
 button.nav-link {
     font-size: .75rem;
     color: var(--negro-suave);
+    background-color: var(--secondary-color);
 }
 
 @media screen and (width > 768px)  {
@@ -271,8 +271,9 @@ button.nav-link {
 
 .main-search {
 display: flex;
-flex-direction: column;
+flex-direction: row;
 align-items: center;
+justify-content: space-around;
 }
 
 .input-text {
@@ -313,6 +314,10 @@ border-radius: .5rem;
     display: flex;
 }
 
+.productos-buscados {
+    color: var(--negro-suave);
+}
+
 @media screen and (width > 768px) {
     .info-section-container {
         flex-direction: row;
@@ -338,7 +343,13 @@ border-radius: .5rem;
 
     .main-search {
         margin: 1rem;
+        justify-content: center;
     }
+
+    .productos-buscados {
+        margin: 1rem;
+    }
+
     .input-text {
         width: 50%;
     }

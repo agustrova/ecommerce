@@ -14,7 +14,6 @@
     --margin-align: auto;
 }
 
-
 .table-container {
     display: flex;
     justify-content: center;
@@ -104,6 +103,7 @@
     border-radius: 3px;
     cursor: pointer;
     border: none;
+    
     &:not(:last-child) {
         margin-right: 5px;
     }
@@ -116,12 +116,7 @@
 .btn-editarUser,.btn-editarProduct {
     display: flex;
     justify-content: space-between;
-    padding: .25rem;
-
-}
-
-.btn-editar, .btn-borrar{
-    font-size: 1.25rem;
+    padding: .2rem;
 }
 
 .input-container {

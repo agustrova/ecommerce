@@ -7,13 +7,13 @@ const loguedUser = JSON.parse(localStorage.getItem('currentUser'))
 if (loguedUser) {
     if(loguedUser.rol === 'Admin') {
         const userMenu = document.createElement ('li') 
-        userMenu.classList.add('nav-item');
+        userMenu.classList.add('nav-item')
         userMenu.innerHTML = '<a href ="/pages/admin/user-admin.html" class="nav-link">Admin usarios</a>'
 navList.appendChild(userMenu)
 
 
 const productMenu = document.createElement ('li') 
-productMenu.classList.add('nav-item');
+productMenu.classList.add('nav-item')
 productMenu.innerHTML = '<a href ="/pages/admin/product-admin.html" class="nav-link">Admin productos</a>'
 navList.appendChild(productMenu)
 
@@ -24,7 +24,7 @@ navList.appendChild(productMenu)
     userNameHTML.innerText = loguedUser.fullname
 
     const userImg = document.createElement('img')
-    userImg.src = loguedUser.image;
+    userImg.src = loguedUser.image
     userImg.alt = `${loguedUser.fullname} profile picture`
     userImg.classList.add('user-profile-picure')
 
@@ -51,8 +51,8 @@ navList.appendChild(productMenu)
     const userActionHTML = userInfoHeader.querySelector('.user-action')
 
     const loginLink = document.createElement("a")
-    loginLink.href = '/pages/login/login.html';
-    loginLink.innerText = "Ingresar";
+    loginLink.href = '/pages/login/login.html'
+    loginLink.innerText = "Ingresar"
     loginLink.classList.add('header-link', 'nav-link')
 
     userActionHTML.appendChild(loginLink)

@@ -1,7 +1,5 @@
 const usersArray = JSON.parse(localStorage.getItem("users"))
 const tableBody = document.getElementById('table-body')
-
-const searchInput = document.querySelector('#search') 
 const userForm = document.querySelector("form#user-form")
 const submitBtn = userForm.querySelector('button[type=submit].btn-form')
 
@@ -39,18 +37,30 @@ arrayPintar.forEach ((user, index) => {
 }
 
 
+const searchInputUser = document.querySelector('#search')
+const contadorSpan = document.querySelector('.productos-buscados')
 
-const searchInputUser = document.querySelector('#search') 
-
-searchInputUser.addEventListener ('keyup', (eventito) => {
+searchInputUser.addEventListener('keyup', (eventito) => {
     const inputValue = eventito.target.value.toLowerCase()
-    const usuariosFiltrados = 
-    usersArray.filter((usuario) => {
-    const nombre = usuario.fullname.toLowerCase()
-    return nombre.includes(inputValue) 
+    
+    if (inputValue === '') {
+        contadorSpan.textContent = ''
+        pintarProductos([])
+        return
+    }
+
+    const usuariosFiltrados = usersArray.filter((usuario) => {
+        const nombre = usuario.fullname.toLowerCase()
+        return nombre.includes(inputValue)
     })
+
+    const cantidadUsuarios = usuariosFiltrados.length
+    const mensaje = cantidadUsuarios === 1 ? '(1 usuario)' : `(${cantidadUsuarios} usuarios)`
+    contadorSpan.textContent = mensaje
+
     pintarUsuarios(usuariosFiltrados)
 })
+
 
 
 userForm.addEventListener("submit", (evt) => {
