@@ -14,7 +14,6 @@
     --margin-align: auto;
 }
 
-
 .table-container {
     display: flex;
     justify-content: center;
@@ -64,17 +63,30 @@
     font-size: 12px;
 }
 
-.product-table :is(th, td) {
-    padding: .5rem;
-        border: 2px solid #DDDDDD;
+.user-table :is(th) {
+    color: white;
 }
 
+.product-table :is(th, td) {
+    padding: .5rem;
+    border: 2px solid #DDDDDD;
+}
 
-.user-avatar, .product-img {
+.product-table :is(th) {
+    color: white;
+}
+
+.user-avatar {
     width: 50px;
     height: 50px;
     object-fit: cover;
     border-radius: 50%;
+}
+
+.product-img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
 }
 
 .table-row {
@@ -91,6 +103,7 @@
     border-radius: 3px;
     cursor: pointer;
     border: none;
+    
     &:not(:last-child) {
         margin-right: 5px;
     }
@@ -103,12 +116,7 @@
 .btn-editarUser,.btn-editarProduct {
     display: flex;
     justify-content: space-between;
-    padding: .25rem;
-
-}
-
-.btn-editar, .btn-borrar{
-    font-size: 1.25rem;
+    padding: .2rem;
 }
 
 .input-container {

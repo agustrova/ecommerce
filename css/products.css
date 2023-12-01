@@ -14,7 +14,6 @@
     --margin-align: auto;
 }
 
-
 .card-container {
     padding: 1rem;
     display: flex;
@@ -22,8 +21,6 @@
     flex-wrap: wrap;
     justify-content: center;
 }
-
-
 
 .card {
     display: flex;
@@ -105,7 +102,7 @@
     background-color: white;
     border: none;
     padding: .5rem;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .card-btn {
@@ -113,11 +110,42 @@
     font-weight: 300;
     text-decoration: none;
     border: none;
-    padding: 6px 12px;
+    padding: 4px 9px;
     border-radius: 5px;
     color: var(--negro-suave);
 }
 
+.card-detail {
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.card-vermas {
+    display: flex;
+    flex-direction: row;
+}
+
+.img-vermas {
+width: 100px;
+object-fit: cover;
+}
+
+.name-vermas {
+    font-size: 1.5rem;
+}
+
+.description-vermas {
+    font-size: 1rem;
+}
+
+.info-vermas {
+    margin-top: 2rem;
+}
+
+.vermas-btn {
+    cursor: pointer;
+}
 
 @media screen and (width > 768px) {
     .card {
@@ -139,6 +167,24 @@
 
 .card-values {
     margin-top: 1rem;
+}
+
+.card-footer {
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.name-vermas {
+    font-size: 2rem;
+}
+
+.img-vermas {
+    width: 300px;
+    object-fit: cover;
+    }
+
+.info-vermas {
+    margin-top: 4rem;
 }
 
 }

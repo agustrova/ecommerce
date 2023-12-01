@@ -20,15 +20,10 @@ function pintarProductos(arrayPintar) {
     </div>
     <footer class="card-footer">
         <button class="card-btn">Agregar al carrito</button>
-        <button class="card-btn vermas-btn" onclick='verDetalle('${prod.id}')' type=button>Ver mas</button>
+        <button class="card-btn vermas-btn" onclick="verMas('${prod.id}')">Ver mas</button>
     </footer>
 </div>`
 })
 }
 
 pintarProductos(productsArray)
-
-
-function verDetalle(id){
-    window.location.href = 'pages/productDetail.html';
-}

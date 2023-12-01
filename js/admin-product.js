@@ -1,9 +1,9 @@
 const productsArray = JSON.parse(localStorage.getItem("products"))
 const tableBody = document.getElementById('table-body')
-const searchInput = document.querySelector('#search') 
 const productForm = document.querySelector("form#product-form")
 const submitBtn = productForm.querySelector('button[type=submit].btn-form')
 console.log(productsArray[0])
+
 function pintarProductosAdmin(arrayPintarProductos) {
     tableBody.innerHTML = ""
     arrayPintarProductos.forEach ((product, index) => {
@@ -14,6 +14,7 @@ function pintarProductosAdmin(arrayPintarProductos) {
         </td>
         <td class="product-name">${product.fullname}</td>
         <td class="product-descrption">${product.description}</td>
+        <td class="product-category">${product.category}</td>
         <td class="product-oldprice">$${product.oldprice}</td>
         <td class="product-newprice">$${product.newprice}</td>
         <td>
@@ -33,15 +34,29 @@ function pintarProductosAdmin(arrayPintarProductos) {
 })
 }
 
-const searchInputProduct = document.querySelector('#search') 
 
-searchInputProduct.addEventListener ('keyup', (eventito) => {
+
+const searchInputProduct = document.querySelector('#search')
+const contadorSpan = document.querySelector('.productos-buscados')
+
+searchInputProduct.addEventListener('keyup', (eventito) => {
     const inputValue = eventito.target.value.toLowerCase()
-    const productosFiltrados = 
-    productsArray.filter((usuario) => {
-    const nombre = usuario.fullname.toLowerCase()
-    return nombre.includes(inputValue) 
+    
+    if (inputValue === '') {
+        contadorSpan.textContent = ''
+        pintarProductos([])
+        return
+    }
+
+    const productosFiltrados = productsArray.filter((producto) => {
+        const nombre = producto.fullname.toLowerCase()
+        return nombre.includes(inputValue)
     })
+
+    const cantidadProductos = productosFiltrados.length
+    const mensaje = cantidadProductos === 1 ? '(1 producto)' : `(${cantidadProductos} productos)`
+    contadorSpan.textContent = mensaje
+
     pintarProductosAdmin(productosFiltrados)
 })
 
@@ -71,7 +86,7 @@ productForm.addEventListener("submit", (evt) => {
         oldprice: el.oldprice.value,
         newprice: el.newprice.value, 
         image: el.image.value,
-
+        category: el.category.value,
     }
     
     if (el.id.value) {
@@ -158,6 +173,7 @@ productForm.addEventListener("submit", (evt) => {
     el.oldprice.value = productEdit.oldprice
     el.newprice.value = productEdit.newprice
     el.image.value = userEdit.image
+    el.category.value = userEdit.category
 
     submitBtn.classList.add('btn-edit')
     submitBtn.innerText = 'Editar producto'
